@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
-.leng-box #leng-flag {
-  width: 25px;
+.navbar-smart-btns {
+  flex: 2;
+  margin-left: 50px;
 }/*# sourceMappingURL=styles.css.map */
