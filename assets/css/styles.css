@@ -7,39 +7,6 @@
   transition: opacity 2s, margin-left 2s, margin-right 2s;
 }
 
-html, body {
-  background-color: #a970ff;
-  font-family: "Lato", sans-serif;
-}
-
-.navbar-smart-btns {
-  flex: 2;
-  margin-left: 50px;
-}
-
-.content {
-  padding-top: 160px;
-  padding-bottom: 60px;
-}
-
-.index {
-  display: none;
-  position: fixed;
-  top: 80px;
-  right: 30px;
-  padding-top: 10px;
-  padding-right: 13px;
-  opacity: 75%;
-  border-left: 2px solid lightgrey;
-}
-.index ul {
-  list-style: none;
-}
-.index ul li a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
 .me h1 {
   color: rgb(255, 255, 255);
   font-style: italic;
@@ -120,4 +87,36 @@ footer nav div img {
   .me #sliding-text p {
     font-size: light;
   }
+}
+html, body {
+  background-color: #a970ff;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar-smart-btns {
+  flex: 2;
+  margin-left: 50px;
+}
+
+.content {
+  padding-top: 160px;
+  padding-bottom: 60px;
+}
+
+.index {
+  display: none;
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  padding-top: 10px;
+  padding-right: 13px;
+  opacity: 75%;
+  border-left: 2px solid lightgrey;
+}
+.index ul {
+  list-style: none;
+}
+.index ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=styles.css.map */

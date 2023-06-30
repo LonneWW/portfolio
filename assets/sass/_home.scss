@@ -1,0 +1,94 @@
+.me {
+  h1 {
+      color: $primary-color;
+      font-style: italic;
+      font-weight: bold;
+  }
+  img {
+      width: 45%;
+      border-radius: 50%;
+      z-index: 1;
+      box-shadow: 10px 10px 0px 3px white;
+  }
+}
+
+
+.sliding-r {
+  align-self: end;
+  text-align: right;
+  margin-right: 5%;
+}
+
+.sliding-l {
+  margin-left: 5%;
+
+}
+
+.sliding-l,
+.sliding-r {
+  opacity: 100%;
+  width: 60%;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 15px;
+  box-shadow: -5px 5px 10px 0px $primary-color;
+
+  @extend %sliding
+}
+
+footer nav {
+  background-color: rgb(49, 49, 49);
+  height: 60px;
+  div img{
+      width:40px;
+      margin-left: 30px;
+  }
+  margin-top: auto; 
+}
+
+
+@media only screen and (max-width:768px) {
+  #home{
+      display: none;
+  }
+
+  aside {
+      display: none;
+  }
+  
+  .me {
+      img {
+          width: 60%;
+      }
+      p {
+          font-size: normal;
+      }
+  }
+  .sliding-l,
+  .sliding-r {
+      text-align: center;
+  }
+}
+
+@media only screen and (min-width:992px){
+  .me {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      #profile{
+          width: 55%;
+          flex: 1;
+          img {
+              width: 50%;
+          }
+      }
+      #sliding-text{
+          width: 45%;
+          flex: 1;
+          p {
+              font-size: light;
+          }
+      }
+      
+  }
+}
