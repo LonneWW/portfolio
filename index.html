@@ -2,63 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <title>Samuel Barbieri's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"><title>Samuel Barbieri's Portfolio</title>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>  
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 align-items-center">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav align-text-center">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
+<body class="d-flex flex-column">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 align-items-center fixed-top">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav align-text-center">
+                    <li class="nav-item active" id="home">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Più su di me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Progetti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contatti</a>
+                    </li>               
+                </ul>
                 <!-- Dark Mode and lenguages options buttons -->
-            <div class="navbar-smart-btns align-self-end d-flex justify-content-end">
-                <div class="dropdown leng-box px-1 mx-1">
-                    <button type="button" class="btn btn-dark"> <a href="">Dark Mode</a> </button>
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img style="width: 25px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/64px-Flag_of_Italy.svg.png" alt="">
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">IT</a>
-                        <a class="dropdown-item" href="#">EN</a>
+                <div class="navbar-smart-btns align-self-end d-flex justify-content-end">
+                    <div class="dropdown leng-box px-1 mx-1">
+                        <button type="button" class="btn btn-dark"> <a href="">Dark Mode</a> </button>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img style="width: 25px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/64px-Flag_of_Italy.svg.png" alt="">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">IT</a>
+                            <a class="dropdown-item" href="#">EN</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </nav>
+    </header>
+    <!-- Da rimuovere e spostare nelle page più lunghe-->
+    <aside>
+        <nav class="index">
+            <ul>
+                <li>
+                    <a href="#">Chi sono</a>
+                </li>
+                <li>
+                    <a href="#">Il mio percorso</a>
+                </li>
+                <li>
+                    <a href="#">Eccetera</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="content">
+        <div class="me">
+            <div id="profile">
+                <div class="d-flex justify-content-center align-items-center p-5">
+                    <img src="https://avatarthelastairbender.store/wp-content/uploads/2021/07/Iroh-Merch.jpg" alt="">
+                </div>
+                <h1 class="h1 text-center p-5">Samuel Barbieri</h1>    
+            </div>
+            
+            <!-- Sliding -->
+            <div class="m-3 d-flex flex-column justify-content-start" id="sliding-text">
+                <div class="sliding-l p-3 my-4">
+                    <h5>Developer in a making!</h5>
+                    <p>Ho buona conoscenza di HTML, CSS e le basi di JavaScript, Phyton e C++. Attualmente sto studiando per Full Stack Developer da start2impact.</p>
+                </div>
+
+                <div class="sliding-r p-3 my-4">
+                    <h5>Affidabile, Meticoloso e Previdente</h5>
+                    <p>Alcune tra le caratteristiche che mi rendono tanto efficiente quanto tedioso ☺</p>
+                </div>
+
+                <div class="sliding-l p-3 my-4">
+                    <h5>Materie che mi piacerebbe approfondire</h5>
+                    <p>Meccanica, Elettronica, Automatismi semplici, Stampa 3D e ovviamente la programmazione.</p>
+                </div>
+
+                <div class="sliding-r p-3 my-4">
+                    <h5>Puppo la fava?</h5>
+                    <p>Lo puppi al bomber?</p>
+                </div>
+            </div>
+
 
         </div>
-    </nav>
-
-
-
-
-
+    </div>
+    
+    <footer>
+        <nav class="d-flex justify-content-around align-items-center">
+            <a href="">Contatti</a>
+            <div>
+                <!-- Loghi placeholder-->
+                <a href=""><img style="background-color: black; border-radius: 50%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Instagram_logo.png/768px-Instagram_logo.png" alt=""></a>
+                <a href="" ><img style="background-color: white; border-radius: 50%;" src="https://pixlok.com/wp-content/uploads/2022/02/Linkedin-Icon-SVG-09yudf.png" alt=""></a>
+            </div>
+        </nav>
+    </footer>
 
         
-
 
 
     <script src="bootstrap/js/bootstrap.bundle.js"> </script>

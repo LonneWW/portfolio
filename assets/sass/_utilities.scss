@@ -1,3 +1,9 @@
-$primary-color: orange;
-$secondary-color: white;
+//Variabili
+$primary-color: rgb(255, 255, 255);
+$secondary-color: #845EC2;
 $nav-ord-var: 1;
+
+//Extend/inheritance
+%sliding {
+  transition: opacity 2s, margin-left 2s, margin-right 2s;
+}
