@@ -1,17 +1,101 @@
-.me {
-  h1 {
-      color: $primary-color;
-      font-style: italic;
-      font-weight: bold;
+.content{
+  .me {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h1, h4 {
+        font-style: italic;
+        font-weight: bold;
+    }
+  
+    h1{
+      color: white;
+      text-shadow: 3px 3px 2px $secondary-color;
+    }
+  
+    h4 {
+      color: $secondary-color;
+    }
+  
+    p {
+      font-size: 1.2em;
+      color: white;
+    }
+  
+    img {
+        width: 45%;
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: -10px 10px 0px 3px white;
+    }
   }
-  img {
-      width: 45%;
-      border-radius: 50%;
-      z-index: 1;
-      box-shadow: 10px 10px 0px 3px white;
+  
+  .more-about-me{
+    position: relative;
+    min-height: 800px;
+      #cards-nav-left{
+        display: none; //Paused, js required
+        position: absolute;
+        top: 55%;
+        left: 3%;
+        height: 30px;
+        width: 30px;
+        color: white;
+        border: 2px solid white;
+        background-color: transparent;
+        border-radius: 50%;
+      }
+      #cards-nav-right{
+        display: none; //Paused, js required
+        position: absolute;
+        top: 55%;
+        right: 3%;
+        height: 30px;
+        width: 30px;
+        color: white;
+        border: 2px solid white;
+        background-color: transparent;
+        border-radius: 50%;
+      }
+    .card{
+      width: 80%;
+      height: 650px;
+      border-radius: 25px;
+      border: 1px solid white;
+      overflow: hidden;
+      position: absolute;
+      left: 10%;
+      z-index: 2;
+      .card-bg{
+        background-color: black;
+      }
+      img{
+        height: 250px;
+        object-fit: cover;
+      }
+      .card-body{
+        h5{
+          color: $decoration-color;
+          font-style: italic;
+        }
+      }
+      :hover{
+        animation-play-state: paused;
+      }
+    }
+
+    #card-1{
+      animation: animation-first-card 55s infinite;
+    }
+
+    #card-2{
+      animation: animation-second-card 55s infinite;
+    }
+
+    #card-3{
+      animation: animation-third-card 55s infinite;
+    }
   }
 }
-
 
 .sliding-r {
   align-self: end;
@@ -24,21 +108,25 @@
 
 }
 
-.sliding-l,
-.sliding-r {
+.sl-home{
   opacity: 100%;
-  width: 60%;
+  width: 70%;
   color: $primary-color;
+  background-color: #555555;
   border: 1px solid $primary-color;
   border-radius: 15px;
-  box-shadow: -5px 5px 10px 0px $primary-color;
+  box-shadow: -5px 5px 10px 0px $secondary-color;
+}
+
+.sliding-l,
+.sliding-r {
 
   @extend %sliding
 }
 
 footer nav {
   background-color: rgb(49, 49, 49);
-  height: 60px;
+  height: 55px;
   div img{
       width:40px;
       margin-left: 30px;
@@ -46,22 +134,18 @@ footer nav {
   margin-top: auto; 
 }
 
-
+//smartphone-like display
 @media only screen and (max-width:768px) {
-  #home{
-      display: none;
-  }
-
   aside {
       display: none;
   }
   
   .me {
       img {
-          width: 60%;
+          width: 55%;
       }
       p {
-          font-size: normal;
+          font-style: normal;
       }
   }
   .sliding-l,
@@ -70,6 +154,7 @@ footer nav {
   }
 }
 
+//desktop-like display
 @media only screen and (min-width:992px){
   .me {
       display: flex;
@@ -79,16 +164,24 @@ footer nav {
           width: 55%;
           flex: 1;
           img {
-              width: 50%;
+              width: 55%;
           }
       }
       #sliding-text{
           width: 45%;
           flex: 1;
-          p {
-              font-size: light;
+          p{
+              font-weight: light;
           }
       }
       
+  }
+
+  .more-about-me{
+    #cards-nav-left,
+    #cards-nav-right{
+      display: none;
+    }
+    
   }
 }
