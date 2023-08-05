@@ -15,7 +15,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg bg-dark px-5 align-items-center fixed-top">
-            <a class="navbar-brand mx-4" href="#"><img class="me-5" src="https://picsum.photos/45/45" alt=""></a>
+            <a class="navbar-brand mx-4" href="#"><img class="me-5" src="../assets/img/logo.png" alt="" style="width: 50px; border-radius: 50%;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,15 +28,15 @@
                         <a class="nav-link" href="#more-about-me">Più su di me</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link" href="#">Lavori</a>
+                        <a class="nav-link" href="#works">Lavori</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link" href="#">Contatti</a>
+                        <a class="nav-link" href="#contact">Contatti</a>
                     </li>               
                 </ul>
                 <!-- Dark Mode and lenguages options buttons -->
                 <div class="navbar-smart-btns align-self-end d-flex justify-content-end my-auto">
-                    <div class="dropdown px-1 mx-1">
+                    <div class="dropdown px-1 mx-5 align-self-center">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img style="width: 25px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/64px-Flag_of_Italy.svg.png" alt="">
                         </button>
@@ -45,7 +45,10 @@
                             <a class="dropdown-item leng-option" href="#">EN</a>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-dark"> Dark Mode </button>
+                    <div class="dark-light-box d-flex flex-column align-items-center">
+                        <a href="#dark-mode" id="light-mode"><img src="../assets/img/sun.png" alt=""></a>
+                        <a href="#light-mode" id="dark-mode"><img src="../assets/img/moon.png" alt=""></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -65,12 +68,12 @@
             <div class="mx-3 d-flex flex-column justify-content-start" id="sliding-text">
                 <div class="sliding-l p-3 my-4 sl-text">
                     <h4 class="fs-2">Developer in a making!</h4>
-                    <p>Sono un aspirante developer che attualmente sta imparando HTML e CSS, ma in passato ho anche dato una sbirciata a linguaggi come JavaScript, Phyton e C++ che sicuramente riprenderò in futuro. Attualmente sto studiando per Full Stack Developer da start2impact.</p>
+                    <p>Sono un aspirante developer che attualmente sta imparando HTML e CSS, ma in passato ho anche dato una sbirciata a linguaggi come JavaScript, Phyton e C++ che sicuramente riprenderò in futuro. Attualmente sto studiando per Full Stack Developer da <a href="https://www.start2impact.it/master/full-stack-development/">start2impact</a>.</p>
                 </div>
 
                 <div class="sliding-r p-3 my-4 sl-text">
                     <h4 class="fs-2">Affidabile, Meticoloso e Previdente</h4>
-                    <p>Alcune tra le caratteristiche che mi rendono tanto efficiente quanto tedioso ☺</p>
+                    <p>Alcune tra le caratteristiche che mi rendono tanto efficiente quanto terribilmente noioso ☺</p>
                 </div>
 
                 <div class="sliding-l p-3 my-4 sl-text">
@@ -81,17 +84,17 @@
         </div>
 
         <div class="more-about-me"  id="more-about-me">
-            <h1 class="mx-auto pt-4 pb-1 text-center title" >Più su di me</h1>
+            <h1 class="mx-auto pt-4 mb-4 text-center title" >Più su di me</h1>
 
-            <div class="carusel-box">
-                <div class="carusel" >
-                    
+            <div class="carusel-wrapper">
+                <div class="carusel d-flex" >
+
                     <div class="card" id="card-1">
                         <img src="https://www.smartworld.it/wp-content/uploads/2015/02/codice-code-programmazione-fhd-720x480.png" class="card-img-top" alt="..." >
                         <div class="card-body text-bg-dark">
                             <h5 class="card-title fs-4">Programmazione</h5>
-                            <p class="card-text">Fin'ora ho seguito alcuni corsi come "Intro to Computer Science" di Dave Evans -in cui è compreso superficialmente Pyhton- e
-                                "Intro to JavaScript" di Julia Van Cleve e James Parkes sulla piattaforma Udacity, quest'ultimo durante il perido scolastico, dove ho anche imparato le basi 
+                            <p class="card-text">Fin'ora ho seguito alcuni corsi come <a href="https://www.udacity.com/blog/2014/04/intro-to-computer-science-udacitys-most_21.html">"Intro to Computer Science"</a> di Dave Evans -in cui è compreso superficialmente Pyhton- e
+                                <a href="https://www.udacity.com/course/intro-to-javascript--ud803">"Intro to JavaScript"</a> di Julia Van Cleve e James Parkes sulla piattaforma Udacity, quest'ultimo durante il perido scolastico, dove ho anche imparato le basi 
                                 di C++, che confesso di dover rispolverare un po' entrambi. 
                             </p>
                         </div>
@@ -101,8 +104,8 @@
                         <img src="https://vpli.org/wp-content/uploads/2018/03/5-Education-friendly-Impact-of-digital-library.jpg" class="card-img-top" alt="..." >
                         <div class="card-body text-bg-dark">
                             <h5 class="card-title fs-4">Materie che mi piacerebbe approfondire</h5>
-                            <p class="card-text">Mi hanno sempre attirato ambiti come il meccanico, elettronico, fisico e il manuale "DIY", che sporadicamente
-                                integro con i libri digitali proposti da HumbleBundle. In futuro mi piacerebbe sfruttare queste conoscenze per alcuni progetti personali che avrei piacere a
+                            <p class="card-text">Mi hanno sempre attirato anche ambiti come il meccanico, elettronico, fisico e il manuale "DIY", che sporadicamente
+                                integro con i libri digitali proposti da <a href="https://www.humblebundle.com/books?hmb_source=navbar">HumbleBundle</a>. In futuro mi piacerebbe sfruttare queste conoscenze per alcuni progetti personali che avrei piacere a
                                 condividere una volta maturati.</p>
                         </div>
                     </div>
@@ -125,33 +128,36 @@
                     <a href="#card-2"></a>
                     <a href="#card-3"></a>
                 </div>
+                
             </div>
             
         </div>
 
         <div class="works py-5" id="works">
             <h1 class="h1 mx-auto mt-5 text-center">Lavori</h1>
-            <div class="works-boxes d-flex my-5">
-                <div class="work-box my-4">
+            <div class="works-boxes-wrapper d-flex flex-column">
+                <div class="work-box my-5">
                     <a href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
+                    <a href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
                 </div>
-                <div class="work-box my-4">
+                <div class="work-box my-5">
                     <a href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
+                    <a href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
                 </div>
-                <div class="work-box my-4">
+                <div class="work-box my-5">
                     <a href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
+                    <a href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <nav class="d-flex justify-content-around align-items-center">
-            <a href=""><strong>Contattami!</strong></a>
-            <div>
-                <!-- Loghi placeholder-->
-                <a href=""><img style="background-color: black; border-radius: 50%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Instagram_logo.png/768px-Instagram_logo.png" alt=""></a>
-                <a href="" ><img style="background-color: white; border-radius: 50%;" src="https://pixlok.com/wp-content/uploads/2022/02/Linkedin-Icon-SVG-09yudf.png" alt=""></a>
+    <footer class="my-2">
+        <nav class="d-flex p-3 mx-5">
+            <a href="" class="mx-5" id="contact">Contattami!</a>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="https://instagram.com/samuelbaz?igshid=MzNlNGNkZWQ4Mg==" target="_blank"><img style="background-color: white; border-radius: 10px;" class="mx-4" src="../assets/img/ig-icon.png" alt=""></a>
+                <a href="" target="_blank"><img style="background-color: white; border-radius: 10px;" class="mx-4" src="../assets/img/linkedin-icon.png" alt=""></a>
             </div>
         </nav>
     </footer>

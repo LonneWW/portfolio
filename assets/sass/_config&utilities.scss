@@ -1,30 +1,44 @@
 //Variabili
-$primary-color: black;
-$secondary-color: #f78708;
-$decoration-color: white;
+$text-darkbg-color: #e7e6e4;
+$text-lightbg-color: #000000;
+$background-color: #0A0A0A;
+$primary-color: #323e39;
+$secondary-color: #141f14;
+$accent-color: #21F3A3;
 
 
 //Extend/inheritance
-%sliding {
-  transition: margin-left 2s, margin-right 2s;
-}
 
 //mixins
 
 //Functions
 
+//Animations
+
+//Set text color based on bg
+@function set-text-color($bg-color){
+  @if(lightness($bg-color)>70){
+    @return $text-lightbg-color;
+  }
+  @else{
+    @return $text-darkbg-color;
+}
+}
 
 
-//
-//@function set-theme-colors{
-//@if(){
-//}
-//@else(){
-//
-//}
-//}
-
-
-//Da rivedere href more-about-me, decentrato verso il basso
 //Da rivedere href card carusel
+//Function Dark Theme
+//Rivedere metodo ordine colori e colori stessi. Rivedere anche gli stili del
+//testo, link e buttons
+//Decorazione gradiente titoli? (esempio "Realtime Colors") 
+//Controllare mixins e extend ottimizzabili che siano semantici
+//Pagina "errore" "pagina da aggiungere"
+//Pagina contatti (QR ig?)
+//Sistemare pagine IG e LinkedIn
+//Background color della navbar trasparente o neutro/universale?  
+
+//Seconda pagina in inglese
+//Aumentare il font all'interno delle card del carusel?
+
+
 
