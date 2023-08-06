@@ -14,6 +14,8 @@ body{
 }
 
 .navbar{
+    --bs-bg-opacity: 0.6;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
     .navbar-brand{
         img{
             background-color: lighten($accent-color, 20);
@@ -65,7 +67,7 @@ body{
 
     .dark-light-box:hover{
         border-radius: 50%;
-        background-image: radial-gradient(circle, $accent-color, darken($accent-color,20), transparent);
+        background-image: radial-gradient(circle, lighten($accent-color,20), $accent-color, transparent);
         object-fit: cover;
     }
 
@@ -97,14 +99,12 @@ body{
     h1, h4 {
         font-style: italic;
         font-weight: bold;
-        text-shadow: 3px 3px 2px $secondary-color;
-        
     }
 
     h1{
         font-size: 4em;
-        color: set-text-color($secondary-color);
-        text-shadow: 1px 1px 10px black;
+        color: set-text-color($background-color);
+        text-shadow: 2px 2px 12px black;
     }
 
     //da rivedere
@@ -116,8 +116,8 @@ body{
         top: 60px;
         left: -50%;
         background-color: $secondary-color;
-        border-top-right-radius: 20%;
-        border-bottom-right-radius: 80%;
+        border-top-right-radius: 55%;
+        border-bottom-right-radius: 45%;
         z-index: -1;
         box-shadow: 5px 10px 0px 3px $primary-color;
     }
@@ -125,20 +125,22 @@ body{
 
     .me {
         margin-top: 10vh;
+        
         h4 {
-        color: set-text-color($background-color);
+        color: set-text-color($accent-color);
+        text-shadow: 2px 2px 2px black;
         }
 
         p {
         font-size: 1.2em;
-        color: $secondary-color;
+        color: set-text-color($accent-color);
         }
 
         img {
             width: 45%;
             border-radius: 50%;
             z-index: 1;
-            box-shadow: -10px 10px 0px 3px #ffffff;
+            box-shadow: 5px 5px 0px 3px $primary-color;
         }
 
         .sliding-r {
@@ -155,29 +157,29 @@ body{
             width: 70%;
             color: set-text-color($accent-color);
             background-color: $accent-color;
-            border-left: 5px solid lighten($secondary-color, 3);
-            border-bottom: 5px solid lighten($secondary-color, 3);
-            border-top: 2px solid lighten($secondary-color, 3);
-            border-right: 2px solid lighten($secondary-color, 3);
+            border-left: 5px solid $primary-color;
+            border-bottom: 5px solid $primary-color;
+            border-top: 2px solid $primary-color;
+            border-right: 2px solid $primary-color;
             border-radius: 15px;
-            box-shadow: -5px 5px 10px 0px $secondary-color;
+            box-shadow: 5px 5px 10px 0px $secondary-color;
             transition: border-color 200ms, transform 400ms, transform-origin 400ms, box-shadow 400ms, margin-right 2s, margin-left 2s;
             a{
                 font-style: italic;
                 text-decoration: none;
                 color: white;
-                text-shadow: 1px 1px 1px $secondary-color;
+                text-shadow: 1px 1px 1px black;
                 font-weight: bold;
             }
             a:hover{
-                text-shadow: 0px 0px 5px $secondary-color;
+                color: lighten($primary-color, 10);
                 transition: transform 200ms, text-shadow 200ms;
             }
             
         }
         
         .sl-text:hover{
-            border-color: lighten($primary-color, 10);
+            border-color: darken(white, 5);
             box-shadow: $primary-color;
             transform: scale(1.150);
             transform-origin: bottom;
@@ -214,14 +216,15 @@ body{
                     }
                     .card-body{
                         h5{
+                            font-weight: bold;
                         color: lighten($accent-color, 20);
                         font-style: italic;
                         }
                         a{
                             font-style: italic;
                             text-decoration: none;
-                            color: set-text-color($secondary-color);
-                            text-shadow: 1px 1px 1px $secondary-color;
+                            color: set-text-color($background-color);
+                            text-shadow: 1px 1px 1px black;
                             font-weight: bold;
                         }
                         a:hover{
@@ -281,7 +284,7 @@ footer {
     
         #contact:hover{
             transform: scale(1.1);
-            color: $text-lightbg-color;
+            color: set-text-color($accent-color);
             background-color: $accent-color;
         }
 
@@ -293,6 +296,8 @@ footer {
             img{
                 width: 40px;
                 height: 40px;
+                border-radius: 10px;
+                background-color: white;
             }
             a{
                 transition: transform 200ms;
@@ -434,6 +439,7 @@ footer {
                 }
             }
             a:last-of-type{
+                font-weight: bold;
                 margin-top: 5px;
                 display: block;
                 color: lighten($accent-color, 20);
