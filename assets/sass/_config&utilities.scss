@@ -1,7 +1,7 @@
 //Variabili
 $text-darkbg-color: #e7e6e4;
 $text-lightbg-color: #F4F4FB;
-$background-color: lighten(#05050F, 4);
+$background-color:  #090924; //#05050F
 $primary-color: #2a2a79;
 $secondary-color: #131335;
 $accent-color: #39399d;
@@ -25,20 +25,26 @@ $accent-color: #39399d;
 }
 }
 
-
-//Da rivedere href card carusel
-//Function Dark Theme
+//Favicon?
+//Breve sottotitolo pagina contatti?
 //Rivedere metodo ordine colori e colori stessi. Rivedere anche gli stili del
 //testo, link e buttons
 //Decorazione gradiente titoli? (esempio "Realtime Colors") 
+//Cambiare immagini cards?
+//Aggiungere esempi di boolean nei works? Compresa pagina di scuse temporanea?
 //Controllare mixins e extend ottimizzabili che siano semantici
+//@import config in cima, il resto in fondo allo stylesheet
+//srcset x schermi in resina?
+//Meta tags?
+//Controlla ogni tag x "alt", "opengraph", "type", "rel" ecc.
 //Pagina "errore" "pagina da aggiungere"
 //Pagina contatti (QR ig?)
 //Sistemare pagine IG e LinkedIn
-//Background color della navbar trasparente o neutro/universale?  
 
 //Seconda pagina in inglese
 //Aumentare il font all'interno delle card del carusel?
 
-
-
+//Js required?
+//Rifare dropdown scelta lingua
+//Function Dark Theme
+//Da rivedere href card carusel

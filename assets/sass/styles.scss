@@ -113,7 +113,7 @@ body{
         height: 100%;
         max-height: 900px;
         position: absolute;
-        top: 60px;
+        top: 72px;
         left: -50%;
         background-color: $secondary-color;
         border-top-right-radius: 55%;
@@ -172,7 +172,7 @@ body{
                 font-weight: bold;
             }
             a:hover{
-                color: lighten($primary-color, 10);
+                color: lighten($primary-color, 30);
                 transition: transform 200ms, text-shadow 200ms;
             }
             
@@ -267,6 +267,60 @@ body{
             align-items: center;
         }
     }
+
+    //for contacts-page
+    form{
+        background-color: rgba($primary-color, 0.3);
+        border-radius: 30px;
+
+        input,
+        textarea{
+            display: block;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea{
+                border-radius: 10px;
+                color:#fff;
+                font-size: 1.5rem;
+                background-color: $primary-color;            
+        }
+
+        input[type=text]:invalid,
+        input[type=email]:invalid{
+            border: 1px dashed #D55C5F;
+            color: #D55C5F;
+            box-shadow: none;
+        }
+
+        textarea{
+            min-height: 30vh;
+        }
+
+        input[type=submit]{
+            position: relative;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 15px;
+            text-decoration: none;
+            transform-origin: center;
+            transition: transform 400ms;
+            background-color: $accent-color;
+        }
+    
+        input[type=submit]:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px lighten($accent-color, 20);
+        }
+
+        input[type=submit]:active{
+            color: $secondary-color;
+            background-color: darken(#fff, 10);
+        }
+    }
 }
 
 footer {
@@ -289,10 +343,13 @@ footer {
         }
 
         #contact:active{
+            color: $secondary-color;
+            background-color: darken(#fff, 10);
             border: 2px solid white;
         }
 
         div{
+            margin-left: auto;
             img{
                 width: 40px;
                 height: 40px;
@@ -305,7 +362,7 @@ footer {
             a:hover{
                 transform: translateY(-5px);
                 img{
-                    background-color: $accent-color;
+                    background-color: lighten($accent-color, 20);
                 }
             }
         }
@@ -316,6 +373,7 @@ footer {
 
   //smartphone/tablet-like display
 @media only screen and (max-width:992px) {
+
     .me {
         img {
             width: 55%;
@@ -362,14 +420,14 @@ footer {
         }
     }
 
-    nav{
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        div{
-            a{
-                margin: 0 auto;
-            }
+    //for contacts page 
+    form{
+        width: 80vw;      
+        
+        input[type=text],
+        input[type=email],
+        textarea{
+            width: 70vw;
         }
     }
 }
@@ -458,5 +516,17 @@ footer {
     nav{
         justify-content: space-between;
         align-items: center;
+    }
+
+    //for contats page
+    form{
+        width: 55vw;
+        height: 70vh;
+        input[type=text],
+        input[type=email],
+        textarea{
+                width:40vw;    
+        }
+
     }
 }
