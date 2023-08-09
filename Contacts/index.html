@@ -15,24 +15,21 @@
 
 <header>
         <nav class="navbar navbar-expand-lg px-5 align-items-center fixed-top">     
-            <a class="navbar-brand mx-4" href="#"><img src="../assets/img/logo.png" alt="" style="width: 50px; border-radius: 50%;"></a>
+            <a class="navbar-brand mx-4" href="../Main-Page"><img src="../assets/img/logo.png" alt="" style="width: 50px; border-radius: 50%;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav align-text-center ">
                     <li class="nav-item active m-2">
-                        <a class="nav-link" href="../Main-Page/index.html">Home</a>
+                        <a class="nav-link" href="../Main-Page">Home</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link" href="../Main-Page/index.html/#more-about-me">Più su di me</a>
+                        <a class="nav-link" href="../Main-Page/index.html#more-about-me">Più su di me</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link" href="../Main-Page/index.html/#works">Lavori</a>
-                    </li>
-                    <li class="nav-item m-2">
-                        <a class="nav-link" href="#top">Contatti</a>
-                    </li>               
+                        <a class="nav-link" href="../Main-Page/index.html#works">Lavori</a>
+                    </li>            
                 </ul>
                 <!-- Dark Mode and lenguages options buttons -->
                 <div class="navbar-smart-btns align-self-end d-flex justify-content-end my-auto">
@@ -58,13 +55,28 @@
         <div class="decoration"></div>
 
         <h1 class="h1 mx-auto mt-5 mb-2 text-center">Contatti</h1>
-        <form class="px-2 py-5 mx-auto" id="contact-form">
-            <input type="hidden" name="contact_number">
-            <input class="my-4 mx-auto px-3" type="text" name="user_name" placeholder="Nome" minlength="5" required>
-            <input class="my-4 mx-auto px-3" type="email" name="user_email" placeholder="Indirizzo Email" minlength="6" required>
-            <textarea class="my-4 mx-auto px-3" name="message" placeholder="Messaggio" minlength="30" required></textarea>
-            <input class="ms-auto me-5 mt-5" type="submit" value="Send">
-        </form>
+
+        <div class="form-wrapper d-flex mx-auto">
+            <form class="px-2 py-5 mx-auto" id="contact-form">
+                <input type="hidden" name="contact_number">
+                <input class="my-4 mx-auto px-3" type="text" name="user_name" placeholder="Nome" minlength="5" required>
+                <input class="my-4 mx-auto px-3" type="email" name="user_email" placeholder="Indirizzo Email" minlength="6" required>
+                <textarea class="my-4 mx-auto px-3" name="message" placeholder="Messaggio" minlength="30" required></textarea>
+                <input class="ms-auto me-5 mt-5" type="submit" value="Invia" onclick="location.href='#thx_message'">
+            </form>
+            <div class="after-submit p-4">
+                <h2 class="m-2 p-3">Grazie!</h2>
+                <p class="mx-2 my-auto p-3">Vi ringrazio per aver visitato il mio sito ed aver scelto di contattarmi, sono contento di sapere che il mio lavoro
+                    ha suscitato il vostro interesse. È mio obiettivo professionale continuare a crescere e migliorare le mie capacità,
+                    soprattutto collaborando con chi condivide i miei stessi valori. </br></br>
+                    Se l'email è stata inviata correttamente vi risponderò il prima possibile. </br><br>
+                    Vi ringrazio ancora per il vostro interesse e fiducia. </br></br></br>
+                    -Samuel
+                </p> 
+                <a href="../Main-Page/" class="mt-5 d-inline-block" id="thx_message">Torna alla home</a>
+            </div>
+        </div>
+        
     </div>
 
     <footer class="my-2">

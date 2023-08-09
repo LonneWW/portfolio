@@ -231,32 +231,37 @@ body {
 .content .works .works-boxes-wrapper {
   align-items: center;
 }
-.content form {
+.content .form-wrapper {
+  position: relative;
+  overflow-x: hidden;
   background-color: rgba(42, 42, 121, 0.3);
   border-radius: 30px;
 }
-.content form input,
-.content form textarea {
+.content .form-wrapper form {
+  flex: 1 0 100%;
+}
+.content .form-wrapper form input,
+.content .form-wrapper form textarea {
   display: block;
 }
-.content form input[type=text],
-.content form input[type=email],
-.content form textarea {
+.content .form-wrapper form input[type=text],
+.content .form-wrapper form input[type=email],
+.content .form-wrapper form textarea {
   border-radius: 10px;
   color: #fff;
   font-size: 1.5rem;
   background-color: #2a2a79;
 }
-.content form input[type=text]:invalid,
-.content form input[type=email]:invalid {
+.content .form-wrapper form input[type=text]:invalid,
+.content .form-wrapper form input[type=email]:invalid {
   border: 1px dashed #D55C5F;
   color: #D55C5F;
   box-shadow: none;
 }
-.content form textarea {
+.content .form-wrapper form textarea {
   min-height: 30vh;
 }
-.content form input[type=submit] {
+.content .form-wrapper form input[type=submit] {
   position: relative;
   font-size: 1.2em;
   font-weight: bold;
@@ -266,13 +271,44 @@ body {
   text-decoration: none;
   transform-origin: center;
   transition: transform 400ms;
-  background-color: #39399d;
+  background-color: #2a2a79;
 }
-.content form input[type=submit]:hover {
+.content .form-wrapper form input[type=submit]:hover {
   transform: scale(1.1);
   box-shadow: 0px 0px 15px #7171cb;
 }
-.content form input[type=submit]:active {
+.content .form-wrapper form input[type=submit]:active {
+  color: #131335;
+  background-color: #e6e6e6;
+}
+.content .form-wrapper .after-submit {
+  flex: 1 0 100%;
+}
+.content .form-wrapper .after-submit h2 {
+  font-size: 3rem;
+  color: white;
+}
+.content .form-wrapper .after-submit p {
+  font-size: 1.3rem;
+  color: #e7e6e4;
+}
+.content .form-wrapper .after-submit a {
+  margin-left: 70%;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 15px;
+  text-decoration: none;
+  transform-origin: center;
+  transition: transform 400ms;
+  background-color: #2a2a79;
+}
+.content .form-wrapper .after-submit a:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px #7171cb;
+}
+.content .form-wrapper .after-submit a:active {
   color: #131335;
   background-color: #e6e6e6;
 }
@@ -335,6 +371,9 @@ footer nav div a:hover img {
   .carusel-wrapper .carusel {
     overflow-x: auto;
   }
+  .carusel-wrapper .carusel .card {
+    margin-right: 10vw;
+  }
   .carusel-wrapper .carusel .card img {
     height: 200px;
   }
@@ -355,13 +394,23 @@ footer nav div a:hover img {
   .works-boxes-wrapper .work-box a:last-child {
     display: none;
   }
-  form {
+  .form-wrapper {
     width: 80vw;
   }
-  form input[type=text],
-  form input[type=email],
-  form textarea {
+  .form-wrapper form {
+    width: 80vw;
+    height: auto;
+  }
+  .form-wrapper form input[type=text],
+  .form-wrapper form input[type=email],
+  .form-wrapper form textarea {
     width: 70vw;
+  }
+  .form-wrapper form textarea {
+    height: 70vh;
+  }
+  .form-wrapper .after-submit {
+    width: 80vw;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -438,13 +487,21 @@ footer nav div a:hover img {
     justify-content: space-between;
     align-items: center;
   }
-  form {
+  .form-wrapper {
     width: 55vw;
     height: 70vh;
   }
-  form input[type=text],
-  form input[type=email],
-  form textarea {
+  .form-wrapper form {
+    width: 55vw;
+    height: 70vh;
+  }
+  .form-wrapper form input[type=text],
+  .form-wrapper form input[type=email],
+  .form-wrapper form textarea {
     width: 40vw;
+  }
+  .form-wrapper .after-submit {
+    width: 55vw;
+    height: 70vh;
   }
 }/*# sourceMappingURL=styles.css.map */

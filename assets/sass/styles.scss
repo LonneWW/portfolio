@@ -269,58 +269,98 @@ body{
     }
 
     //for contacts-page
-    form{
+    .form-wrapper{
+        position: relative;
+        overflow-x: hidden;
         background-color: rgba($primary-color, 0.3);
         border-radius: 30px;
-
-        input,
-        textarea{
-            display: block;
-        }
-
-        input[type=text],
-        input[type=email],
-        textarea{
-                border-radius: 10px;
-                color:#fff;
-                font-size: 1.5rem;
-                background-color: $primary-color;            
-        }
-
-        input[type=text]:invalid,
-        input[type=email]:invalid{
-            border: 1px dashed #D55C5F;
-            color: #D55C5F;
-            box-shadow: none;
-        }
-
-        textarea{
-            min-height: 30vh;
-        }
-
-        input[type=submit]{
-            position: relative;
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: 10px 20px;
-            color: white;
-            border-radius: 15px;
-            text-decoration: none;
-            transform-origin: center;
-            transition: transform 400ms;
-            background-color: $accent-color;
-        }
+        form{
+            flex: 1 0 100%;
+            input,
+            textarea{
+                display: block;
+            }
     
-        input[type=submit]:hover{
-            transform: scale(1.1);
-            box-shadow: 0px 0px 15px lighten($accent-color, 20);
+            input[type=text],
+            input[type=email],
+            textarea{
+                    border-radius: 10px;
+                    color:#fff;
+                    font-size: 1.5rem;
+                    background-color: $primary-color;            
+            }
+    
+            input[type=text]:invalid,
+            input[type=email]:invalid{
+                border: 1px dashed #D55C5F;
+                color: #D55C5F;
+                box-shadow: none;
+            }
+    
+            textarea{
+                min-height: 30vh;
+            }
+    
+            input[type=submit]{
+                position: relative;
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 10px 20px;
+                color: white;
+                border-radius: 15px;
+                text-decoration: none;
+                transform-origin: center;
+                transition: transform 400ms;
+                background-color: $primary-color;
+            }
+        
+            input[type=submit]:hover{
+                transform: scale(1.1);
+                box-shadow: 0px 0px 15px lighten($accent-color, 20);
+            }
+    
+            input[type=submit]:active{
+                color: $secondary-color;
+                background-color: darken(#fff, 10);
+            }
         }
+        .after-submit{
+            flex: 1 0 100%;
+            h2{
+                font-size: 3rem;
+                color:white;
+            }
 
-        input[type=submit]:active{
-            color: $secondary-color;
-            background-color: darken(#fff, 10);
+            p { 
+                font-size: 1.3rem;
+                color: set-text-color($accent-color);
+            }
+
+            a{  
+                margin-left: 70%;
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 10px 20px;
+                color: white;
+                border-radius: 15px;
+                text-decoration: none;
+                transform-origin: center;
+                transition: transform 400ms;
+                background-color: $primary-color;
+            }
+        
+            a:hover{
+                transform: scale(1.1);
+                box-shadow: 0px 0px 15px lighten($accent-color, 20);
+            }
+    
+            a:active{
+                color: $secondary-color;
+                background-color: darken(#fff, 10);
+            }
         }
     }
+    
 }
 
 footer {
@@ -392,6 +432,7 @@ footer {
         .carusel{
             overflow-x: auto;
             .card{
+                margin-right: 10vw;
                 img{
                     height: 200px;
                 }
@@ -421,15 +462,25 @@ footer {
     }
 
     //for contacts page 
-    form{
-        width: 80vw;      
-        
-        input[type=text],
-        input[type=email],
-        textarea{
-            width: 70vw;
+    .form-wrapper{
+        width:80vw;
+        form{
+            width: 80vw; 
+            height: auto;     
+            input[type=text],
+            input[type=email],
+            textarea{
+                width: 70vw;
+            }
+            textarea{
+                height: 70vh;
+            }
+        }
+        .after-submit{
+            width:80vw;
         }
     }
+    
 }
 
 
@@ -519,14 +570,21 @@ footer {
     }
 
     //for contats page
-    form{
+    .form-wrapper{
         width: 55vw;
         height: 70vh;
-        input[type=text],
-        input[type=email],
-        textarea{
-                width:40vw;    
+        form{
+            width: 55vw;
+            height: 70vh;
+            input[type=text],
+            input[type=email],
+            textarea{
+                    width:40vw;    
+            }
         }
-
+        .after-submit{
+            width: 55vw;
+            height: 70vh;
+        }
     }
 }
