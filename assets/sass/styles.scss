@@ -211,12 +211,13 @@ body{
                     border: 1px solid white;
                     overflow: hidden;
                     img{
+                        height: 100%;
                         object-fit: cover;
                         overflow: hidden;
                     }
                     .card-body{
                         h5{
-                            font-weight: bold;
+                        font-weight: bold;
                         color: lighten($accent-color, 20);
                         font-style: italic;
                         }
@@ -297,8 +298,15 @@ body{
                 box-shadow: none;
             }
     
+            label{
+                color: $accent-color;
+                font-style: italic;
+                font-weight: bold;
+            }
+
             textarea{
                 min-height: 30vh;
+                resize: none;
             }
     
             input[type=submit]{
@@ -472,6 +480,9 @@ footer {
             textarea{
                 width: 70vw;
             }
+            label{
+                margin-left: 5%
+            }
             textarea{
                 height: 70vh;
             }
@@ -580,6 +591,9 @@ footer {
             input[type=email],
             textarea{
                     width:40vw;    
+            }
+            label{
+                margin-left: 13%
             }
         }
         .after-submit{

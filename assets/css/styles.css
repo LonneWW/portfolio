@@ -184,6 +184,7 @@ body {
   overflow: hidden;
 }
 .content .more-about-me .carusel-wrapper .carusel .card img {
+  height: 100%;
   object-fit: cover;
   overflow: hidden;
 }
@@ -258,8 +259,14 @@ body {
   color: #D55C5F;
   box-shadow: none;
 }
+.content .form-wrapper form label {
+  color: #39399d;
+  font-style: italic;
+  font-weight: bold;
+}
 .content .form-wrapper form textarea {
   min-height: 30vh;
+  resize: none;
 }
 .content .form-wrapper form input[type=submit] {
   position: relative;
@@ -406,6 +413,9 @@ footer nav div a:hover img {
   .form-wrapper form textarea {
     width: 70vw;
   }
+  .form-wrapper form label {
+    margin-left: 5%;
+  }
   .form-wrapper form textarea {
     height: 70vh;
   }
@@ -499,6 +509,9 @@ footer nav div a:hover img {
   .form-wrapper form input[type=email],
   .form-wrapper form textarea {
     width: 40vw;
+  }
+  .form-wrapper form label {
+    margin-left: 13%;
   }
   .form-wrapper .after-submit {
     width: 55vw;
