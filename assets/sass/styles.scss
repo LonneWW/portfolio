@@ -4,13 +4,13 @@
 
 @import "config&utilities";
 
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     font-family: "Lato", sans-serif;
     background-color: $background-color;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 .navbar{
@@ -178,12 +178,6 @@ body{
             
         }
         
-        .sl-text:hover{
-            border-color: darken(white, 5);
-            box-shadow: $primary-color;
-            transform: scale(1.150);
-            transform-origin: bottom;
-        }
         
     }
     
@@ -305,7 +299,6 @@ body{
             }
 
             textarea{
-                min-height: 30vh;
                 resize: none;
             }
     
@@ -397,14 +390,13 @@ footer {
         }
 
         div{
-            margin-left: auto;
             img{
                 width: 40px;
                 height: 40px;
                 border-radius: 10px;
                 background-color: white;
             }
-            a{
+            a{  
                 transition: transform 200ms;
             }
             a:hover{
@@ -429,6 +421,7 @@ footer {
         p {
             font-style: normal;
         }
+        
     }
     .sliding-l,
     .sliding-r {
@@ -469,12 +462,23 @@ footer {
         }
     }
 
+    footer{
+        nav{
+            flex-direction: column;
+        #contact{
+            margin: 0 auto;
+        }
+        div{
+            margin: 0 auto;
+        }
+        }
+    }
+
     //for contacts page 
     .form-wrapper{
         width:80vw;
         form{
-            width: 80vw; 
-            height: auto;     
+            width: 80vw;
             input[type=text],
             input[type=email],
             textarea{
@@ -484,7 +488,7 @@ footer {
                 margin-left: 5%
             }
             textarea{
-                height: 70vh;
+                height: 70%;
             }
         }
         .after-submit{
@@ -515,7 +519,12 @@ footer {
                 font-weight: light;
             }
         }
-        
+        .sl-text:hover{
+            border-color: darken(white, 5);
+            box-shadow: $primary-color;
+            transform: scale(1.150);
+            transform-origin: bottom;
+        }
         .sliding-l{
             text-align: left;
         }
@@ -575,11 +584,18 @@ footer {
         }
     }
 
-    nav{
-        justify-content: space-between;
-        align-items: center;
+    footer{
+        nav{
+            justify-content: space-between;
+            align-items: center;
+            #contact{
+                margin-left: 5%;
+            }
+            div{
+                margin-left: auto;
+            }
+        }
     }
-
     //for contats page
     .form-wrapper{
         width: 55vw;
@@ -591,6 +607,9 @@ footer {
             input[type=email],
             textarea{
                     width:40vw;    
+            }
+            textarea{
+                height: 30vh;
             }
             label{
                 margin-left: 13%

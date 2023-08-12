@@ -2,13 +2,13 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Lato", sans-serif;
   background-color: #090924;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .navbar {
@@ -152,12 +152,6 @@ body {
   color: #6f6fcd;
   transition: transform 200ms, text-shadow 200ms;
 }
-.content .me .sl-text:hover {
-  border-color: #f2f2f2;
-  box-shadow: #2a2a79;
-  transform: scale(1.15);
-  transform-origin: bottom;
-}
 .content .more-about-me {
   padding-top: 100px;
   position: relative;
@@ -265,7 +259,6 @@ body {
   font-weight: bold;
 }
 .content .form-wrapper form textarea {
-  min-height: 30vh;
   resize: none;
 }
 .content .form-wrapper form input[type=submit] {
@@ -342,9 +335,6 @@ footer nav #contact:active {
   background-color: #e6e6e6;
   border: 2px solid white;
 }
-footer nav div {
-  margin-left: auto;
-}
 footer nav div img {
   width: 40px;
   height: 40px;
@@ -401,12 +391,20 @@ footer nav div a:hover img {
   .works-boxes-wrapper .work-box a:last-child {
     display: none;
   }
+  footer nav {
+    flex-direction: column;
+  }
+  footer nav #contact {
+    margin: 0 auto;
+  }
+  footer nav div {
+    margin: 0 auto;
+  }
   .form-wrapper {
     width: 80vw;
   }
   .form-wrapper form {
     width: 80vw;
-    height: auto;
   }
   .form-wrapper form input[type=text],
   .form-wrapper form input[type=email],
@@ -417,7 +415,7 @@ footer nav div a:hover img {
     margin-left: 5%;
   }
   .form-wrapper form textarea {
-    height: 70vh;
+    height: 70%;
   }
   .form-wrapper .after-submit {
     width: 80vw;
@@ -442,6 +440,12 @@ footer nav div a:hover img {
   }
   .me #sliding-text p {
     font-weight: light;
+  }
+  .me .sl-text:hover {
+    border-color: #f2f2f2;
+    box-shadow: #2a2a79;
+    transform: scale(1.15);
+    transform-origin: bottom;
   }
   .me .sliding-l {
     text-align: left;
@@ -493,9 +497,15 @@ footer nav div a:hover img {
   .works-boxes-wrapper .work-box a:last-of-type:hover {
     transform: scale(1.1);
   }
-  nav {
+  footer nav {
     justify-content: space-between;
     align-items: center;
+  }
+  footer nav #contact {
+    margin-left: 5%;
+  }
+  footer nav div {
+    margin-left: auto;
   }
   .form-wrapper {
     width: 55vw;
@@ -509,6 +519,9 @@ footer nav div a:hover img {
   .form-wrapper form input[type=email],
   .form-wrapper form textarea {
     width: 40vw;
+  }
+  .form-wrapper form textarea {
+    height: 30vh;
   }
   .form-wrapper form label {
     margin-left: 13%;
