@@ -259,6 +259,12 @@ body{
         .works-boxes-wrapper{
             align-items: center;
             .work-box{
+                a{
+                    iframe{
+                        overflow: cover;
+                        border-radius: 15px;
+                    }
+                }
                 a:last-of-type{
                     font-weight: bold;
                     margin-top: 5px;
@@ -409,14 +415,12 @@ footer {
                 height: 40px;
                 border-radius: 10px;
                 background-color: white;
-            }
-            a{  
                 transition: transform 200ms;
             }
             a:hover{
-                transform: translateY(-5px);
                 img{
                     background-color: lighten($accent-color, 20);
+                    transform: translateY(-5px);
                 }
             }
         }
@@ -461,7 +465,6 @@ footer {
     }
     .works-boxes-wrapper{
         .work-box{
-            overflow: hidden;
             height: 70vh;
             max-height: 800px;
             width: 80vw;
@@ -470,22 +473,6 @@ footer {
                 width: 100%;
                 height: 100%;
             }
-            a:last-child{
-                display: none;
-            }
-        }
-    }
-
-    footer{
-        nav{
-            flex-direction: column;
-        #contact{
-            margin: 0 auto;
-            transform-origin: bottom;
-        }
-        div{
-            margin: 0 auto;
-        }
         }
     }
 
@@ -511,6 +498,19 @@ footer {
         }
     }
     
+    footer{
+        nav{
+            flex-direction: column;
+        #contact{
+            margin: 0 auto;
+            transform-origin: bottom;
+        }
+        div{
+            margin: 0 auto;
+        }
+        }
+    }
+
 }
 
 
@@ -599,18 +599,6 @@ footer {
         }
     }
 
-    footer{
-        nav{
-            justify-content: space-between;
-            align-items: center;
-            #contact{
-                margin-left: 5%;
-            }
-            div{
-                margin-left: auto;
-            }
-        }
-    }
     //for contats page
     .form-wrapper{
         width: 55vw;
@@ -633,6 +621,19 @@ footer {
         .after-submit{
             width: 55vw;
             height: 70vh;
+        }
+    }
+    
+    footer{
+        nav{
+            justify-content: space-between;
+            align-items: center;
+            #contact{
+                margin-left: 5%;
+            }
+            div{
+                margin-left: auto;
+            }
         }
     }
 }
