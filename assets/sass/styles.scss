@@ -137,7 +137,6 @@ body{
         }
 
         img {
-            width: 45%;
             border-radius: 50%;
             z-index: 1;
             box-shadow: 5px 5px 0px 3px $primary-color;
@@ -205,7 +204,6 @@ body{
                     border: 1px solid white;
                     overflow: hidden;
                     img{
-                        height: 100%;
                         object-fit: cover;
                         overflow: hidden;
                     }
@@ -260,6 +258,22 @@ body{
         margin-top: 10vh;
         .works-boxes-wrapper{
             align-items: center;
+            .work-box{
+                a:last-of-type{
+                    font-weight: bold;
+                    margin-top: 5px;
+                    display: block;
+                    color: lighten($accent-color, 20);
+                    text-decoration: none;
+                    text-align: center;
+                    text-shadow: 3px 3px 2px $secondary-color;
+                    border-radius: 15px;
+                    transition: transform 400ms;
+                }
+                a:last-of-type:hover{
+                        transform: scale(1.1);
+                }
+            }
         }
     }
 
@@ -416,7 +430,7 @@ footer {
 
     .me {
         img {
-            width: 55%;
+            width: 75%;
         }
         p {
             font-style: normal;
@@ -435,7 +449,7 @@ footer {
             .card{
                 margin-right: 10vw;
                 img{
-                    height: 200px;
+                    height: 40vh;
                 }
             }
         }
@@ -467,6 +481,7 @@ footer {
             flex-direction: column;
         #contact{
             margin: 0 auto;
+            transform-origin: bottom;
         }
         div{
             margin: 0 auto;
@@ -567,7 +582,7 @@ footer {
                     overflow: hidden;
                 }
             }
-            a:last-of-type{
+            /* a:last-of-type{
                 font-weight: bold;
                 margin-top: 5px;
                 display: block;
@@ -580,7 +595,7 @@ footer {
             }
             a:last-of-type:hover{
                     transform: scale(1.1);
-            }
+            } */
         }
     }
 

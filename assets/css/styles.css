@@ -116,7 +116,6 @@ body {
   color: #e7e6e4;
 }
 .content .me img {
-  width: 45%;
   border-radius: 50%;
   z-index: 1;
   box-shadow: 5px 5px 0px 3px #2a2a79;
@@ -178,7 +177,6 @@ body {
   overflow: hidden;
 }
 .content .more-about-me .carusel-wrapper .carusel .card img {
-  height: 100%;
   object-fit: cover;
   overflow: hidden;
 }
@@ -225,6 +223,20 @@ body {
 }
 .content .works .works-boxes-wrapper {
   align-items: center;
+}
+.content .works .works-boxes-wrapper .work-box a:last-of-type {
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
+  color: #7171cb;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 3px 3px 2px #131335;
+  border-radius: 15px;
+  transition: transform 400ms;
+}
+.content .works .works-boxes-wrapper .work-box a:last-of-type:hover {
+  transform: scale(1.1);
 }
 .content .form-wrapper {
   position: relative;
@@ -353,7 +365,7 @@ footer nav div a:hover img {
 
 @media only screen and (max-width: 992px) {
   .me img {
-    width: 55%;
+    width: 75%;
   }
   .me p {
     font-style: normal;
@@ -372,7 +384,7 @@ footer nav div a:hover img {
     margin-right: 10vw;
   }
   .carusel-wrapper .carusel .card img {
-    height: 200px;
+    height: 40vh;
   }
   .carusel-btns {
     display: none;
@@ -396,6 +408,7 @@ footer nav div a:hover img {
   }
   footer nav #contact {
     margin: 0 auto;
+    transform-origin: bottom;
   }
   footer nav div {
     margin: 0 auto;
@@ -475,6 +488,20 @@ footer nav div a:hover img {
   .works-boxes-wrapper .work-box {
     height: 80vh;
     width: 80vw;
+    /* a:last-of-type{
+        font-weight: bold;
+        margin-top: 5px;
+        display: block;
+        color: lighten($accent-color, 20);
+        text-decoration: none;
+        text-align: center;
+        text-shadow: 3px 3px 2px $secondary-color;
+        border-radius: 15px;
+        transition: transform 400ms;
+    }
+    a:last-of-type:hover{
+            transform: scale(1.1);
+    } */
   }
   .works-boxes-wrapper .work-box a iframe {
     margin-left: 7.5%;
@@ -482,20 +509,6 @@ footer nav div a:hover img {
     width: 85%;
     border-radius: 30px;
     overflow: hidden;
-  }
-  .works-boxes-wrapper .work-box a:last-of-type {
-    font-weight: bold;
-    margin-top: 5px;
-    display: block;
-    color: #7171cb;
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 3px 3px 2px #131335;
-    border-radius: 15px;
-    transition: transform 400ms;
-  }
-  .works-boxes-wrapper .work-box a:last-of-type:hover {
-    transform: scale(1.1);
   }
   footer nav {
     justify-content: space-between;
