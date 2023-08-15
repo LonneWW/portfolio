@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Samuel Barbieri - Portfolio">
+    <meta name="description" content="Ciao! Sono Samuel e questo è il personale portfolio. Qui potrete vedere le mie passioni, i miei lavori e, col tempo, anche i miei progressi.">
+    <meta name="og:title" property="og:title" content="Samuel Barbieri - Portfolio">
+    <meta name="og:type" property="og:type" content="website">
+    <meta name="og:description" property="og:description" content="Ciao! Sono Samuel e questo è il personale portfolio. Qui potrete vedere le mie passioni, i miei lavori e, col tempo, anche i miei progressi.">
+    <meta name="og:image" property="og:image" content="../assets/img/og-img.png">
+    <meta name="robots" content="noindex, noimageindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <title>Samuel Barbieri - Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -16,7 +23,7 @@
 
 <header>
         <nav class="navbar navbar-expand-lg px-5 align-items-center fixed-top">     
-            <a class="navbar-brand mx-4" href="#"><img src="assets/img/logo.png" alt="" style="width: 50px; border-radius: 50%;"></a>
+            <a class="navbar-brand mx-4" href="#"><img src="assets/img/logo.png" alt="Icona logo" style="width: 50px; border-radius: 50%;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,23 +39,23 @@
                         <a class="nav-link" href="#works">Lavori</a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link" href="Contacts/">Contatti</a>
+                        <a rel=“author” class="nav-link" href="Contacts/">Contatti</a>
                     </li>               
                 </ul>
                 <!-- Dark Mode and lenguages options buttons -->
                 <div class="navbar-smart-btns align-self-end d-flex justify-content-end my-auto">
                     <div class="dropdown px-1 mx-5 align-self-center">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img style="width: 25px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/64px-Flag_of_Italy.svg.png" alt="">
+                            <img style="width: 25px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/64px-Flag_of_Italy.svg.png" alt="Bandiera italiana">
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item leng-option" href="#">IT</a>
-                            <a class="dropdown-item leng-option" href="#">EN</a>
+                            <a rel=“author” class="dropdown-item leng-option" href="#">IT</a>
+                            <a rel=“author” class="dropdown-item leng-option" href="#">EN</a>
                         </div>
                     </div>
                     <div class="dark-light-box d-flex flex-column align-items-center">
-                        <a href="#dark-mode" id="light-mode"><img src="assets/img/sun.png" alt=""></a>
-                        <a href="#light-mode" id="dark-mode"><img src="assets/img/moon.png" alt=""></a>
+                        <a href="#dark-mode" id="light-mode"><img src="assets/img/sun.png" alt="Icona sole"></a>
+                        <a href="#light-mode" id="dark-mode"><img src="assets/img/moon.png" alt="Icona luna"></a>
                     </div>
                 </div>
             </div>
@@ -60,7 +67,7 @@
         <div class="me">
             <div id="profile">
                 <div class="d-flex justify-content-center align-items-center p-5">
-                    <img src="assets/img/profile-img.jpeg" alt="">
+                    <img src="assets/img/profile-img.jpeg" alt="Foto profilo">
                 </div>
                 <h1 class="h1 text-center mb-5">Samuel Barbieri</h1>    
             </div>
@@ -69,7 +76,7 @@
             <div class="mx-3 d-flex flex-column justify-content-start" id="sliding-text">
                 <div class="sliding-l p-3 my-4 sl-text">
                     <h4 class="fs-2">Developer in a making!</h4>
-                    <p>Sono un aspirante developer che attualmente sta imparando HTML e CSS, ma in passato ho anche dato una sbirciata a linguaggi come JavaScript, Phyton e C++ che sicuramente riprenderò in futuro. Attualmente sto studiando per Full Stack Developer da <a target="_blank" href="https://www.start2impact.it/master/full-stack-development/">start2impact</a>.</p>
+                    <p>Sono un aspirante developer che attualmente sta imparando HTML e CSS, ma in passato ho anche dato una sbirciata a linguaggi come JavaScript, Phyton e C++ che sicuramente riprenderò in futuro. Attualmente sto studiando per Full Stack Developer da <a rel=“external” target="_blank" href="https://www.start2impact.it/master/full-stack-development/">start2impact</a>.</p>
                 </div>
 
                 <div class="sliding-r p-3 my-4 sl-text">
@@ -90,29 +97,29 @@
             <div class="carusel-wrapper">
                 <div class="carusel d-flex" >
 
-                    <div class="card" id="card-1">
-                        <img src="https://www.smartworld.it/wp-content/uploads/2015/02/codice-code-programmazione-fhd-720x480.png" class="card-img-top" alt="..." >
+                    <div class="card my-2 ms-2" id="card-1">
+                        <img src="https://www.smartworld.it/wp-content/uploads/2015/02/codice-code-programmazione-fhd-720x480.png" class="card-img-top" alt="Foto raffigurante del codice" >
                         <div class="card-body text-bg-dark">
                             <h5 class="card-title fs-4">Programmazione</h5>
-                            <p class="card-text">Fin'ora ho seguito alcuni corsi come <a target="_blank" href="https://www.udacity.com/blog/2014/04/intro-to-computer-science-udacitys-most_21.html">"Intro to Computer Science"</a> di Dave Evans -in cui è compreso superficialmente Pyhton- e
-                                <a target="_blank" href="https://www.udacity.com/course/intro-to-javascript--ud803">"Intro to JavaScript"</a> di Julia Van Cleve e James Parkes sulla piattaforma Udacity. Quest'ultimo durante il periodo scolastico, dove ho imparato anche le basi 
+                            <p class="card-text">Fin'ora ho seguito alcuni corsi come <a rel=“external” target="_blank" href="https://www.udacity.com/blog/2014/04/intro-to-computer-science-udacitys-most_21.html">"Intro to Computer Science"</a> di Dave Evans -in cui è compreso superficialmente Pyhton- e
+                                <a rel=“external” target="_blank" href="https://www.udacity.com/course/intro-to-javascript--ud803">"Intro to JavaScript"</a> di Julia Van Cleve e James Parkes sulla piattaforma Udacity. Quest'ultimo durante il periodo scolastico, dove ho imparato anche le basi 
                                 di C++, che confesso di dover rispolverare un po'. 
                             </p>
                         </div>
                     </div>
         
-                    <div class="card" id="card-2">
-                        <img src="https://www.sparknotes.com/images/banner-othersubjects.svg" style="background-color: #212529;" class="card-img-top" alt="..." >
+                    <div class="card my-2 ms-2" id="card-2">
+                        <img src="https://www.sparknotes.com/images/banner-othersubjects.svg" class="card-img-top" alt="Foto raffigurante varie materie" style="background-color: #212529; object-fit: contain; padding: 10px 10px;">
                         <div class="card-body text-bg-dark">
                             <h5 class="card-title fs-4">Materie di mio interesse</h5>
                             <p class="card-text">Mi hanno sempre attirato anche ambiti come il meccanico, elettronico, fisico e il manuale "DIY", che sporadicamente
-                                integro con i libri digitali proposti da <a target="_blank" href="https://www.humblebundle.com/books?hmb_source=navbar">HumbleBundle</a>. In futuro mi piacerebbe sfruttare queste conoscenze per alcuni progetti personali che avrei piacere a
+                                integro con i libri digitali proposti da <a rel=“external” target="_blank" href="https://www.humblebundle.com/books?hmb_source=navbar">HumbleBundle</a>. In futuro mi piacerebbe sfruttare queste conoscenze per alcuni progetti personali che avrei piacere a
                                 condividere una volta maturati.</p>
                         </div>
                     </div>
         
-                    <div class="card" id="card-3">                     
-                        <img src="assets/img/Kira.jpg" class="card-img-top" alt="..." >
+                    <div class="card my-2 ms-2" id="card-3">                     
+                        <img src="assets/img/Kira.jpg" class="card-img-top" alt="Foto del mio cane" >
                         <div class="card-body text-bg-dark">
                             <h5 class="card-title fs-4">Cinofilia</h5>
                             <p class="card-text">La cinofilia ha cambiato la mia vita e il mio modo di approcciarmi al mondo.
@@ -138,16 +145,16 @@
             <h1 class="h1 mx-auto mt-5 text-center">Lavori</h1>
             <div class="works-boxes-wrapper d-flex flex-column">
                 <div class="work-box my-5">
-                    <a href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
-                    <a href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
+                    <a rel=“author” href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
+                    <a rel=“author” href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
                 </div>
                 <div class="work-box my-5">
-                    <a href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
-                    <a href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
+                    <a rel=“author” href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
+                    <a rel=“author” href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
                 </div>
                 <div class="work-box my-5">
-                    <a href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
-                    <a href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
+                    <a rel=“author” href="https://www.start2impact.it"><iframe src="https://www.start2impact.it"></iframe></a>
+                    <a rel=“author” href="https://www.start2impact.it" class="fs-2">Dacci un'occhiata!</a>
                 </div>
             </div>
         </div>
@@ -155,11 +162,11 @@
 
     <footer class="my-2">
         <nav class="d-flex p-3 mx-5">
-            <a href="Contacts/" class="my-3" id="contact">Contattami!</a>
+            <a rel=“author” href="Contacts/" class="my-3" id="contact">Contattami!</a>
             <div class="my-3">
-                <a href="https://instagram.com/samuelbaz?igshid=MzNlNGNkZWQ4Mg==" target="_blank" class="mx-3"><img src="assets/img/ig-icon.png" alt=""></a>
-                <a href="https://github.com/LonneWW" target="_blank" class="mx-3"><img src="assets/img/github-icon.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/samuel-barbieri-100886208/" target="_blank" class="mx-3"><img src="assets/img/linkedin-icon.png" alt=""></a>
+                <a rel=“external” href="https://instagram.com/samuelbaz?igshid=MzNlNGNkZWQ4Mg==" target="_blank" class="mx-3"><img src="assets/img/ig-icon.png" alt="Icona Instagram"></a>
+                <a rel=“external” href="https://github.com/LonneWW" target="_blank" class="mx-3"><img src="assets/img/github-icon.png" alt="Icona GitHub"></a>
+                <a rel=“external” href="https://www.linkedin.com/in/samuel-barbieri-100886208/" target="_blank" class="mx-3"><img src="assets/img/linkedin-icon.png" alt="Icona LinkedIn"></a>
             </div>
         </nav>
     </footer>
