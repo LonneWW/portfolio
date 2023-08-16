@@ -486,20 +486,6 @@ footer nav div a:hover img {
   .works-boxes-wrapper .work-box {
     height: 80vh;
     width: 80vw;
-    /* a:last-of-type{
-        font-weight: bold;
-        margin-top: 5px;
-        display: block;
-        color: lighten($accent-color, 20);
-        text-decoration: none;
-        text-align: center;
-        text-shadow: 3px 3px 2px $secondary-color;
-        border-radius: 15px;
-        transition: transform 400ms;
-    }
-    a:last-of-type:hover{
-            transform: scale(1.1);
-    } */
   }
   .works-boxes-wrapper .work-box a iframe {
     margin-left: 7.5%;
