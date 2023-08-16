@@ -435,6 +435,7 @@ footer {
     .me {
         img {
             width: 75%;
+            max-width: 450px;
         }
         p {
             font-style: normal;
@@ -525,6 +526,7 @@ footer {
             flex: 1;
             img {
                 width: 55%;
+                min-width: 350px;
             }
         }
         #sliding-text{

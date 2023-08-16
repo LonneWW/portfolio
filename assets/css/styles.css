@@ -366,6 +366,7 @@ footer nav div a:hover img {
 @media only screen and (max-width: 992px) {
   .me img {
     width: 75%;
+    max-width: 450px;
   }
   .me p {
     font-style: normal;
@@ -442,6 +443,7 @@ footer nav div a:hover img {
   }
   .me #profile img {
     width: 55%;
+    min-width: 350px;
   }
   .me #sliding-text {
     width: 45%;
