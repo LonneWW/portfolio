@@ -72,7 +72,7 @@
                 <input class="mt-4 mx-auto px-3" id="input-email" type="email" name="user_email" placeholder="Email address" minlength="6" required>
                 <label for="input-email" class="me-auto">Check that the email address is correct</label>
                 <textarea class="my-4 mx-auto px-3" name="message" placeholder="Message" minlength="30" required></textarea>
-                <input class="ms-auto me-5 mt-5 mb-3" type="submit" value="Submit" onclick="location.href='#thx_message'">
+                <input class="ms-auto me-5 mt-5 mb-3 g-recaptcha" type="submit" value="Submit" onclick="location.href='#thx_message'" data-sitekey="6LdPar4nAAAAAJN784OYfJ80_k4Kltctf8H7FooY" data-callback="onSubmit">
             </form>
             <div class="after-submit p-4">
                 <h2 class="m-2 p-3">Thank you!</h2>
@@ -121,5 +121,22 @@
                     });
             });
         }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
+    </script>
+    <script>
+        let captchaToken = grecaptcha.getResponse();
+        var params = {
+            name: document.getElementById("user_name").value,
+            "g-recaptcha-response": captchaToken,
+        };
+        let queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
+        let url = `https://lonneww.github.io/portfolio/Contacts/?${queryString}`;
+        document.getElementById("contact-form").action = url;
+        document.getElementById("contact-form").submit();
     </script>
 </body>
