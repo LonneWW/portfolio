@@ -128,15 +128,4 @@
             document.getElementById("contact-form").submit();
         }
     </script>
-    <script>
-        let captchaToken = grecaptcha.getResponse();
-        var params = {
-            name: document.getElementById("user_name").value,
-            "g-recaptcha-response": captchaToken,
-        };
-        let queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
-        let url = `https://lonneww.github.io/portfolio/Contacts/?${queryString}`;
-        document.getElementById("contact-form").action = url;
-        document.getElementById("contact-form").submit();
-    </script>
 </body>
