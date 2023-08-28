@@ -8,6 +8,23 @@ $accent-color: #39399d;
 
 
 //Extend/inheritance
+%after-anchor{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+  background-color: lighten($primary-color, 30);
+}
+
+%hover-anchor{
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
 //mixins
 

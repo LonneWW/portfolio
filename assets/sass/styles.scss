@@ -164,17 +164,20 @@ body{
             box-shadow: 5px 5px 10px 0px $secondary-color;
             transition: border-color 200ms, transform 400ms, transform-origin 400ms, box-shadow 400ms, margin-right 2s, margin-left 2s;
             a{
+                position: relative;
                 font-style: italic;
                 text-decoration: none;
                 color: white;
                 text-shadow: 1px 1px 1px black;
                 font-weight: bold;
+                transition: 0.5s;
             }
-            a:hover{
-                color: lighten($primary-color, 30);
-                transition: transform 200ms, text-shadow 200ms;
+            a::after{
+                @extend %after-anchor;
             }
-            
+            a:hover::after{
+                @extend %hover-anchor;
+            }
         }
         
         
@@ -214,16 +217,19 @@ body{
                         font-style: italic;
                         }
                         a{
+                            position: relative;
                             font-style: italic;
                             text-decoration: none;
                             color: set-text-color($background-color);
                             text-shadow: 1px 1px 1px black;
                             font-weight: bold;
+                            transition: 0.5s;
                         }
-                        a:hover{
-                            color: $accent-color;
-                            text-shadow: 0px 0px 13px black;
-                            transition: transform 200ms, color 200ms;
+                        a::after{
+                            @extend %after-anchor;
+                        }
+                        a:hover::after{
+                            @extend %hover-anchor;
                         }
                     }
                 }
@@ -249,9 +255,7 @@ body{
                     }
                 }
             }
-        }
-
-        
+        } 
     }
 
     .works{
