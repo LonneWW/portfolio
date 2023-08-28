@@ -299,6 +299,7 @@ body {
 }
 .content .form-wrapper .after-submit {
   flex: 1 0 100%;
+  margin-left: 20%;
 }
 .content .form-wrapper .after-submit h2 {
   font-size: 3rem;

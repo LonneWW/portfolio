@@ -287,6 +287,7 @@ body{
     .form-wrapper{
         position: relative;
         overflow-x: hidden;
+        scroll-snap-type: x mandatory;
         background-color: rgba($primary-color, 0.3);
         border-radius: 30px;
         form{
@@ -347,6 +348,7 @@ body{
         }
         .after-submit{
             flex: 1 0 100%;
+            margin-left: 20%;
             h2{
                 font-size: 3rem;
                 color:white;
