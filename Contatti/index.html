@@ -71,7 +71,8 @@
                 <input class="mt-4 mx-auto px-3" id="input-email" type="email" name="user_email" placeholder="Indirizzo Email" minlength="6" required>
                 <label for="input-email" class="me-auto">Controllare che l'indirizzo email sia corretto</label>
                 <textarea class="my-4 mx-auto px-3" name="message" placeholder="Messaggio" minlength="30" required></textarea>
-                <input class="ms-auto me-5 mt-5 mb-3" type="submit" value="Invia" onclick="location.href='#thx_message'">
+                <input class="g-recaptcha-response" type="hidden" name="g-recaptcha-response">
+                <input class="ms-auto me-5 mt-5 mb-3 g-recaptcha-submit" name="g-recaptcha-response" type="submit" value="Invia" onclick="location.href='#thx_message'" data-sitekey="6LdPar4nAAAAAJN784OYfJ80_k4Kltctf8H7FooY" data-callback="onSubmit">
             </form>
             <div class="after-submit p-4">
                 <h2 class="m-2 p-3">Grazie!</h2>
@@ -119,6 +120,12 @@
                         console.log('FAILED...', error);
                     });
             });
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("contact-form").submit();
         }
     </script>
 </body>
