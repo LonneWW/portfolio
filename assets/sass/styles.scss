@@ -170,7 +170,10 @@ body{
                 color: white;
                 text-shadow: 1px 1px 1px black;
                 font-weight: bold;
-                transition: 0.5s;
+                transition: 0.5s, color 0;
+            }
+            a:active{                
+                color: $secondary-color;
             }
             a::after{
                 @extend %after-anchor;
@@ -204,7 +207,7 @@ body{
                     flex: 1 0 100%;
                     scroll-snap-align: start;
                     border-radius: 25px;
-                    border: 1px solid white;
+                    border: 2px solid darken(white,5);
                     overflow: hidden;
                     img{
                         object-fit: cover;
@@ -223,14 +226,17 @@ body{
                             color: set-text-color($background-color);
                             text-shadow: 1px 1px 1px black;
                             font-weight: bold;
-                            transition: 0.5s;
+                            transition: 0.5s, color 0;
+                        }
+                        a:active{
+                            color: $secondary-color;
                         }
                         a::after{
                             @extend %after-anchor;
                         }
                         a:hover::after{
                             @extend %hover-anchor;
-                        }
+                        }                     
                     }
                 }
             }
@@ -364,7 +370,7 @@ body{
             }
 
             a{  
-                margin-left: 70%;
+                margin-left: 75%;
                 font-size: 1.2em;
                 font-weight: bold;
                 padding: 10px 20px;
@@ -412,7 +418,6 @@ footer {
         #contact:active{
             color: $secondary-color;
             background-color: darken(#fff, 10);
-            border: 2px solid white;
         }
 
         div{

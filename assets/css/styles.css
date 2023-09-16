@@ -165,7 +165,10 @@ body {
   color: white;
   text-shadow: 1px 1px 1px black;
   font-weight: bold;
-  transition: 0.5s;
+  transition: 0.5s, color 0;
+}
+.content .me .sl-text a:active {
+  color: #131335;
 }
 .content .more-about-me {
   padding-top: 100px;
@@ -189,7 +192,7 @@ body {
   flex: 1 0 100%;
   scroll-snap-align: start;
   border-radius: 25px;
-  border: 1px solid white;
+  border: 2px solid #f2f2f2;
   overflow: hidden;
 }
 .content .more-about-me .carusel-wrapper .carusel .card img {
@@ -208,7 +211,10 @@ body {
   color: #e7e6e4;
   text-shadow: 1px 1px 1px black;
   font-weight: bold;
-  transition: 0.5s;
+  transition: 0.5s, color 0;
+}
+.content .more-about-me .carusel-wrapper .carusel .card .card-body a:active {
+  color: #131335;
 }
 .content .more-about-me .carusel-wrapper .carusel-btns {
   display: flex;
@@ -324,7 +330,7 @@ body {
   color: #e7e6e4;
 }
 .content .form-wrapper .after-submit a {
-  margin-left: 70%;
+  margin-left: 75%;
   font-size: 1.2em;
   font-weight: bold;
   padding: 10px 20px;
@@ -364,7 +370,6 @@ footer nav #contact:hover {
 footer nav #contact:active {
   color: #131335;
   background-color: #e6e6e6;
-  border: 2px solid white;
 }
 footer nav div img {
   width: 40px;
