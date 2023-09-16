@@ -161,7 +161,6 @@ body {
 .content .me .sl-text a {
   position: relative;
   font-style: italic;
-  text-decoration: none;
   color: white;
   text-shadow: 1px 1px 1px black;
   font-weight: bold;
@@ -207,7 +206,6 @@ body {
 .content .more-about-me .carusel-wrapper .carusel .card .card-body a {
   position: relative;
   font-style: italic;
-  text-decoration: none;
   color: #e7e6e4;
   text-shadow: 1px 1px 1px black;
   font-weight: bold;
@@ -395,6 +393,10 @@ footer nav div a:hover img {
   .sliding-r {
     text-align: center;
   }
+  .sliding-l a,
+  .sliding-r a {
+    text-decoration: underline;
+  }
   .carusel-wrapper {
     max-width: 90vw;
   }
@@ -472,6 +474,9 @@ footer nav div a:hover img {
   .me #sliding-text p {
     font-weight: light;
   }
+  .me #sliding-text a {
+    text-decoration: none;
+  }
   .me .sl-text:hover {
     border-color: #f2f2f2;
     box-shadow: #2a2a79;
@@ -498,6 +503,9 @@ footer nav div a:hover img {
   .more-about-me .carusel-wrapper .carusel .card img {
     max-height: 60%;
     overflow: contain;
+  }
+  .more-about-me .carusel-wrapper .carusel .card a {
+    text-decoration: none;
   }
   .works-boxes-wrapper {
     flex-direction: column;

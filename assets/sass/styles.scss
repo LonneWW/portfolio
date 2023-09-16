@@ -166,7 +166,6 @@ body{
             a{
                 position: relative;
                 font-style: italic;
-                text-decoration: none;
                 color: white;
                 text-shadow: 1px 1px 1px black;
                 font-weight: bold;
@@ -222,7 +221,6 @@ body{
                         a{
                             position: relative;
                             font-style: italic;
-                            text-decoration: none;
                             color: set-text-color($background-color);
                             text-shadow: 1px 1px 1px black;
                             font-weight: bold;
@@ -456,6 +454,9 @@ footer {
     .sliding-l,
     .sliding-r {
         text-align: center;
+        a{
+            text-decoration: underline;
+        }
     }
 
     .carusel-wrapper{
@@ -546,6 +547,9 @@ footer {
             p{
                 font-weight: light;
             }
+            a{
+                text-decoration: none;
+            }
         }
         .sl-text:hover{
             border-color: darken(white, 5);
@@ -556,7 +560,6 @@ footer {
         .sliding-l{
             text-align: left;
         }
-
         .sliding-r{
             text-align: right;
         }
@@ -574,6 +577,9 @@ footer {
                     img{
                         max-height: 60%;
                         overflow: contain;
+                    }
+                    a{
+                        text-decoration: none;
                     }
                 }
             }
