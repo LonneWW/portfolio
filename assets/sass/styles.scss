@@ -16,11 +16,13 @@ body{
 .navbar{
     --bs-bg-opacity: 0.6;
     background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+    //site logo
     .navbar-brand{
         img{
             background-color: lighten($accent-color, 20);
         }
     }
+    //navigation options
     ul{
         a {
             display: inline-block;
@@ -48,28 +50,34 @@ body{
             transform: scale(0.95);
         }
     }
-
-    .dark-light-box{
-        overflow: hidden;
-        height: 50px;
-        width: 50px;
-        scroll-snap-type: y mandatory;
-        scroll-behavior: smooth;
-        transition: scroll-behavior 400ms;
-        a{
-            img{
-                flex: 1 0 100%;
-                width: 50px;
-                height: 50px;                
+    //Lenguages and theme box
+    .navbar-smart-btns {
+        flex:2;
+        margin-left: 50px;
+        //dark-light theme box
+        .dark-light-box{
+            overflow: hidden;
+            height: 50px;
+            width: 50px;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            transition: scroll-behavior 400ms;
+            a{
+                img{
+                    flex: 1 0 100%;
+                    width: 50px;
+                    height: 50px;                
+                }
             }
+        }
+
+        .dark-light-box:hover{
+            border-radius: 50%;
+            background-image: radial-gradient(circle, lighten($accent-color,20), $accent-color, transparent);
+            object-fit: cover;
         }
     }
 
-    .dark-light-box:hover{
-        border-radius: 50%;
-        background-image: radial-gradient(circle, lighten($accent-color,20), $accent-color, transparent);
-        object-fit: cover;
-    }
 
     .navbar-toggler{
         --bs-navbar-color: rgba(255, 255, 255, 0.55);
@@ -87,11 +95,8 @@ body{
 }
 
 
-.navbar-smart-btns {
-    flex:2;
-    margin-left: 50px;
-}
 
+//start of the page content
 .content {
     position: relative;
     padding-top: 60px;
@@ -107,7 +112,7 @@ body{
         text-shadow: 2px 2px 12px black;
     }
 
-    //da rivedere
+    //background decoration
     .decoration{
         width: 100%;
         height: 100%;
@@ -122,10 +127,9 @@ body{
         box-shadow: 5px 10px 0px 3px $primary-color;
     }
 
-
+    //profile section
     .me {
         margin-top: 10vh;
-        
         h4 {
         color: set-text-color($accent-color);
         text-shadow: 2px 2px 2px black;
@@ -185,6 +189,7 @@ body{
         
     }
     
+    //more about me section
     .more-about-me{
         padding-top: 100px; //per fixare gli a href
         position: relative;
@@ -192,7 +197,7 @@ body{
         p{
             font-size: 1.2em;
         }
-        //da rivedere -box per visuale desktop
+        //cards' carusel
         .carusel-wrapper {
             position: relative;
             margin: 0 auto;
@@ -238,6 +243,7 @@ body{
                     }
                 }
             }
+            //carusel navigation buttons
             .carusel-btns{
                 display: flex;
                 column-gap: 1rem;
@@ -262,17 +268,20 @@ body{
         } 
     }
 
+    //works section
     .works{
         margin-top: 10vh;
         .works-boxes-wrapper{
             align-items: center;
             .work-box{
+                //embedded sites
                 a{
                     iframe{
                         overflow: cover;
                         border-radius: 15px;
                     }
                 }
+                //give it a look buttons
                 a:last-of-type{
                     font-weight: bold;
                     margin-top: 5px;
@@ -291,7 +300,7 @@ body{
         }
     }
 
-    //for contacts-page
+    //contacts page form
     .form-wrapper{
         position: relative;
         overflow-x: hidden;
@@ -354,6 +363,8 @@ body{
                 background-color: darken(#fff, 10);
             }
         }
+
+        //thanks message section
         .after-submit{
             flex: 1 0 100%;
             margin-left: 20%;
@@ -394,9 +405,11 @@ body{
     
 }
 
+//footer section
 footer {
     height: 55px;
     nav{   
+        //contacts button
         #contact{
             font-weight: bold;
             padding: 10px 20px;
@@ -418,6 +431,7 @@ footer {
             background-color: darken(#fff, 10);
         }
 
+        //socials buttons
         div{
             img{
                 width: 40px;
@@ -438,9 +452,9 @@ footer {
 
 
 
-  //smartphone/tablet-like display
+//smartphone/tablet-like display
 @media only screen and (max-width:992px) {
-
+    //profile section
     .me {
         img {
             width: 75%;
@@ -459,6 +473,7 @@ footer {
         }
     }
 
+    //cards' carusel
     .carusel-wrapper{
         max-width: 90vw;
         .carusel{
@@ -470,12 +485,13 @@ footer {
                 }
             }
         }
+        .carusel-btns{
+            display: none;
+        }
     }
 
 
-    .carusel-btns{
-        display: none;
-    }
+    //works section
     .works-boxes-wrapper{
         .work-box{
             height: 70vh;
@@ -489,7 +505,7 @@ footer {
         }
     }
 
-    //for contacts page 
+     //contacts page form
     .form-wrapper{
         width:80vw;
         form{
@@ -511,6 +527,7 @@ footer {
         }
     }
     
+    //footer section
     footer{
         nav{
             flex-direction: column;
@@ -527,8 +544,9 @@ footer {
 }
 
 
-  //desktop-like display
+//desktop-like display
 @media only screen and (min-width:992px){
+    //profile section
     .me {
         display: flex;
         justify-content: space-between;
@@ -565,6 +583,7 @@ footer {
         }
     }
 
+    //more about me section
     .more-about-me{
         .carusel-wrapper{
             max-width: 75vw;
@@ -586,6 +605,7 @@ footer {
         }
     }
     
+    //works section
     .works-boxes-wrapper{
         flex-direction: column;
         margin: 0 10%;
@@ -604,7 +624,7 @@ footer {
         }
     }
 
-    //for contats page
+    //contats page form
     .form-wrapper{
         width: 55vw;
         height: 70vh;
@@ -629,6 +649,7 @@ footer {
         }
     }
     
+    //footer section
     footer{
         nav{
             justify-content: space-between;
