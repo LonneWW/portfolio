@@ -306,7 +306,6 @@ body{
         position: relative;
         overflow-x: hidden;
         scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
         background-color: rgba($primary-color, 0.3);
         border-radius: 30px;
         form{
@@ -511,6 +510,7 @@ footer {
     .form-wrapper{
         width:80vw;
         overflow-y: scroll;
+        scroll-behavior: smooth;
         form{
             width: 80vw;
             input[type=text],
